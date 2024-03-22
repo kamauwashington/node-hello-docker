@@ -1,0 +1,19 @@
+{
+  "name": "hello-docker",
+  "version": "1.0.0",
+  "description": "A basic NodeJS app in docker for testing",
+  "scripts": {
+    "start:local": "ts-node ./src/index.ts",
+    "build" : "tsc",
+    "build:docker" : "docker build -t <your-domain>/node-hello-docker ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "express": "^4.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  }
+}

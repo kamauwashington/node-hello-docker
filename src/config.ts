@@ -1,0 +1,1 @@
+export const PORT : number = Number.parseInt(process.env.PORT || '') || 3000;
