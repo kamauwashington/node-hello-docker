@@ -6,7 +6,7 @@ const app: Application = express();
 
 app.get('/', async (req: Request, res: Response) => {
     res.json({
-        "message" : "Hello from node-hello-docker!"    
+        "message" : "Hello World!"    
     })
 });
 
