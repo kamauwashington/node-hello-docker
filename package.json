@@ -1,28 +1,29 @@
 {
   "name": "node-hello",
   "version": "1.0.0",
-  "description": "A basic NodeJS app in docker for testing",
+  "description": "A basic NodeJS app in docker that deploys to Kubernetes for testing",
+  "engines" : { 
+    "npm" : ">=10.0.0",
+    "node" : ">=20.0.0"
+  },
   "scripts": {
     "local:start": "npm run ts-node ./src/index.ts",
     "local:build" : "npm run tsc --build --clean",
-
-    "deploy:all" : "npm run docker:build && npm run docker:push && npm run kubernetes:apply",
 
     "docker:build" :  "docker build -t localhost:5000/node-hello:1.0.0 .",
     "docker:push" : "docker push localhost:5000/node-hello:1.0.0",
     "docker:login" : "docker login localhost:5000 --username foo --password bar",
     "docker:clear-cache" : "docker image rm localhost:5000/node-hello:1.0.0",
-    "predocker:build" : "npm run local:build",
-    
-   
 
+    "predocker:build" : "npm run local:build",
     "predocker:push" : "npm run docker:login",
     "postdocker:push" : "npm run docker:clear-cache",
     
     "kubernetes:apply" : "kubectl apply -f node-hello.yaml",
     "kubernetes:delete" : "kubectl delete -f node-hello.yaml",
     "kubernetes:watch" : "kubectl get pods --watch",
-    
+
+    "deploy:all" : "npm run docker:build && npm run docker:push && npm run kubernetes:apply",
 
     "ts-node" : "ts-node",
     "tsc" : "tsc"
