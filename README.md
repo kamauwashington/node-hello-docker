@@ -2,7 +2,7 @@
 
 > This repository is purely for reference and is illustrative in it is purpose. This is one of the many ways of implementing and or configuring this solution. 
 
-This project is geared towards getting a local sandbox to test a NodeJS Express application in Kubernetes for test projects and Proof of Concepts. It allows the local testing of the NodeJS ExpressJS application, Dockerization, Docker Registry Push, and Kube Apply + Delete. This configuration creates 2 replicas for illustrative purpuses only.
+This project is geared towards getting a local sandbox to test a NodeJS Express application in Kubernetes for test projects and Proof of Concepts. It allows the local testing of the NodeJS ExpressJS application, Dockerization, Docker Registry Push, and Kube Apply + Delete. This configuration creates 2 replicas for illustrative purposes only.
 
 This code and or configuration is not intended to be used in production as is, and should be modified to reflect the standards and practices, and security requirements for where this code when modified will be productionalized.
 
