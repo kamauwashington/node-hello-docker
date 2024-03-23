@@ -18,7 +18,7 @@ Before you continue, ensure you have met the following requirements:
     * While DockerHub can be used, the aim of this repository is to simplify getting up and running
     * use the cmd **docker run -d -p 5000:5000 --name registry registry:latest**
         * On OSX, AirPlay uses port 5000, this can be turned off in settings or the registry can run on another port, the package.json scripts will need to be updated for the latter.
-* run **npm install** prior to issuing any 
+* run **npm install** prior to issuing any other commands.
 
 ## Running
 
