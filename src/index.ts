@@ -1,6 +1,6 @@
 import { Application, Request, Response } from 'express';
 import express from 'express';
-import { PORT } from './config';
+
 
 const app: Application = express();
 
@@ -9,6 +9,8 @@ app.get('/', async (req: Request, res: Response) => {
         "message" : "Hello World!"    
     })
 });
+
+export const PORT : number = Number.parseInt(process.env.PORT || '') || 3000;
 
 const server = app.listen(PORT, async (): Promise<void> => {
     console.log('SERVER IS UP ON PORT:', PORT);
